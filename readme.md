@@ -6,3 +6,5 @@ What did not done:
 * Email notification about the new company
 
 Reason: Did not have enough time, already spent 4 hours
+
+For showing logo's need to create symlink between storage folder and public `php artisan storage:link`
