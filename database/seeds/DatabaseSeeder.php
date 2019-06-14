@@ -1,6 +1,9 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(User::class)->create([
+            'name'           => 'Admin',
+            'email'          => 'admin@admin.com',
+            'password'       => Hash::make('password'),
+            'remember_token' => Str::random(10),
+
+        ]);
     }
 }

@@ -16,6 +16,7 @@ class Employee extends Model
         'last_name',
         'email',
         'phone',
+        'company_id',
     ];
 
     protected $casts = [
@@ -23,5 +24,6 @@ class Employee extends Model
         'last_name'  => 'string',
         'email'      => 'string',
         'phone'      => 'string',
+        'company_id' => 'integer',
     ];
 }

@@ -2,9 +2,9 @@ version: "3"
 
 services:
   php:
-    image: php:7.3-fpm
+    build: .
     ports:
-      - 9000:9000
+      - 3000:8000
     volumes:
       - .:/var/www/
     depends_on:
@@ -17,6 +17,3 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
-
-volumes:
-  mariadb:
